@@ -90,7 +90,7 @@ module Fastlane
           times = 3
           tries = 1
           begin
-            cmd = "java -jar #{buglytoolpath} -i #{df} -u -id #{buglyid} -key #{buglykey} -package #{package} -version #{version}"
+            cmd = "java -jar #{buglytoolpath} -inputSymbol #{df} -appid #{buglyid} -appkey #{buglykey} -bundleid #{package} -version #{version} -platform iOS"
             Actions.sh(cmd)
           rescue => ex
             tries += 1
